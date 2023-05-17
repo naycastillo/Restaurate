@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mollys</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container-hero">
+    <div class="container hero">
+      <div class="customer-suport">
+        <i class="fa-solid fa-headset" style="color: #51371f;"></i>
+        <div class="content-customer-suport">
+        </div>
+      </div>
+
+      <div class="container-logo">
+        <img src="/Imagenes/logo.png" alt="logo">
+      </div>
+
+      <div class="container-user">
+        <i class="fa-solid fa-circle-user" style="color: #51371f;"></i>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="container-navbar">
+    <nav class="navbar container">
+      <i class="fa-solid fa-bars" style="color: #51371f;"></i>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Reservas</a></li>
+        <li><a href="#">Sucursales</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+<p> En Molly's nos destacamos por nuestros famosos brunchs y waffles, contamos con gran variedad tanto dulce como salada. ¡Veni a conocernos y a probar lo mejor de Caballito!</p>
+
+<script 
+   src="https://kit.fontawesome.com/1f339016cc.js" crossorigin="anonymous"></script>
+</script>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="/Imagenes/brunch carrousel.jpg" style="width:100%">
+    <div class="text">BRUNCH</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="/Imagenes/waffle carrousel.jpg" style="width:100%">
+    <div class="text">WAFFLES</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="/Imagenes/comida carrousel.jpg" style="width:100%">
+    <div class="text">ALMUERZO</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+</body>
+</html>
